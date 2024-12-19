@@ -15,11 +15,11 @@ def setup(browser):
     driver.maximize_window()
     return driver
 
-def pytest_addoption(parser):
-    parser.addoption("--browser")
+def pytest_addoption(parser):   # this will get the value from CLI
+    parser.addoption("--browser")  # this will get the value of --browser from CLI
 
 @pytest.fixture()
-def browser(request):
+def browser(request):         # this will return the browser value to setup method
     return request.config.getoption("--browser")
 
 
