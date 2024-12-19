@@ -1,0 +1,4 @@
+
+
+frontend url: demo.nopcommerce.com
+backend url: admin-demo.nopcommerce.com
