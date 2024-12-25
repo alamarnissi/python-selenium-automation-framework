@@ -15,6 +15,7 @@ class Test_001_login:
 
     logger = LogHandler.loggen()
 
+    @pytest.mark.regression
     def test_homePageTitle(self, setup):
         self.logger.info("********* Test_001_login **********")
         self.logger.info("********* Started Home Page Title Test *********")
@@ -34,6 +35,8 @@ class Test_001_login:
             assert False
 
 
+    @pytest.mark.sanity
+    @pytest.mark.regression
     def test_login(self, setup):
         self.logger.info("********* Started Login Test *********")
         self.driver = setup
